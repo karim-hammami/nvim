@@ -3,6 +3,7 @@
 **Don't** use this config as your main if do not understand how neovim works try it at your own risk
 **This** config is messy
 
+
 ## Plugins
 - packer
 - telescope
