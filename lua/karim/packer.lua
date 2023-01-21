@@ -50,7 +50,18 @@ return require('packer').startup(function(use)
       require("toggleterm").setup()
   end}
  use "wikitopian/hardmode"
-use 'lewis6991/impatient.nvim'
+ use 'lewis6991/impatient.nvim'
+ use({
+     "utilyre/barbecue.nvim",
+     requires = {
+         "neovim/nvim-lspconfig",
+         "SmiteshP/nvim-navic",
+         "nvim-tree/nvim-web-devicons", -- optional dependency
+     },
+     after = "nvim-web-devicons", -- keep this if you're using NvChad
+  })
+
+  use 'ray-x/web-tools.nvim'
 
 
 
