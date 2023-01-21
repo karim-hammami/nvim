@@ -63,8 +63,19 @@ return require('packer').startup(function(use)
 
   use 'ray-x/web-tools.nvim'
 
+  use ({
+      "folke/trouble.nvim",
+      requires = "nvim-tree/nvim-web-devicons",
+      })
 
 
+      use 'folke/lsp-colors.nvim'
+use({
+    "andrewferrier/textobj-diagnostic.nvim",
+    config = function()
+        require("textobj-diagnostic").setup({create_default_keymaps = false})
+    end,
+})
 
 
 
