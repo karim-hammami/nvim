@@ -5,4 +5,5 @@ require'web-tools'.setup({
     },
 })
 
+vim.keymap.set("n", "<leader>gs", vim.cmd.Browserclose);
 vim.keymap.set("n", "<leader>g" , vim.cmd.BrowserOpen);
