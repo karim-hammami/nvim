@@ -97,6 +97,9 @@ use {
   end
 }
 use { 'kartikp10/noctis.nvim', requires = { 'rktjmp/lush.nvim' } }
+use "EdenEast/nightfox.nvim" -- Packer
+use 'shaunsingh/nord.nvim'
+use "ayu-theme/ayu-vim"
 
 
 end)
