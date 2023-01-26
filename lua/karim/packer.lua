@@ -82,6 +82,21 @@ use {
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
 use { "catppuccin/nvim", as = "catppuccin" }
+use 'shaunsingh/moonlight.nvim'
+use "olimorris/onedarkpro.nvim"
+use { "ellisonleao/gruvbox.nvim" }
+use 'folke/tokyonight.nvim'
+use { 
+  'olivercederborg/poimandres.nvim',
+  config = function()
+    require('poimandres').setup {
+      -- leave this setup function empty for default config
+      -- or refer to the configuration section
+      -- for configuration options
+    }
+  end
+}
+use { 'kartikp10/noctis.nvim', requires = { 'rktjmp/lush.nvim' } }
 
 
 end)
