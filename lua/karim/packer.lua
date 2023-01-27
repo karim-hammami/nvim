@@ -100,6 +100,13 @@ use { 'kartikp10/noctis.nvim', requires = { 'rktjmp/lush.nvim' } }
 use "EdenEast/nightfox.nvim" -- Packer
 use 'shaunsingh/nord.nvim'
 use "ayu-theme/ayu-vim"
-
+use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    config = function()
+        require("rose-pine").setup()
+        vim.cmd('colorscheme rose-pine')
+    end
+})
 
 end)

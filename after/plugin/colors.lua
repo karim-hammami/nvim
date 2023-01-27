@@ -1,6 +1,6 @@
 function Colorthescreen(color)
-	color = color or "darkplus"
-	vim.cmd("colorscheme darkplus")
+	color = color or "carbonfox"
+	vim.cmd("colorscheme carbonfox")
 end
 
 Colorthescreen()
