@@ -6,3 +6,5 @@ vim.keymap.set("n", "<C-a>", vim.cmd.vsplit)
 vim.keymap.set("n", "<C-y>", vim.cmd.split)
 -- run mason lsp
 vim.keymap.set("n", "<leader>q", vim.cmd.Mason)
+
+vim.cmd("nmap <C-i> mzgg=G`z")
