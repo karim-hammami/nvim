@@ -112,6 +112,6 @@ return require('packer').startup(function(use)
     use('simrat39/inlay-hints.nvim')
 
     use 'jose-elias-alvarez/null-ls.nvim'
-
+    use 'jparise/vim-graphql'
 
 end)
