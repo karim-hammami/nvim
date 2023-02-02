@@ -113,5 +113,8 @@ return require('packer').startup(function(use)
 
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'jparise/vim-graphql'
+    use "lukas-reineke/indent-blankline.nvim"
+
+
 
 end)
