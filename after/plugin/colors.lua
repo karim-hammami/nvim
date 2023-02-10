@@ -1,6 +1,6 @@
 function Color(color)
-	color = color or "darkplus"
-	vim.cmd("colorscheme darkplus")
+	color = color or "rose-pine"
+	vim.cmd("colorscheme rose-pine")
 end
 
 Color()

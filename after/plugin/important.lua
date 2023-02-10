@@ -8,5 +8,3 @@ vim.keymap.set("n", "<C-y>", vim.cmd.split)
 
 vim.cmd("nmap <C-i> mzgg=G`z")
 
-vim.cmd("highlight Normal ctermbg=Black")
-vim.cmd("highlight NonText ctermbg=Black")
