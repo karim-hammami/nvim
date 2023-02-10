@@ -115,8 +115,13 @@ return require('packer').startup(function(use)
     use 'jparise/vim-graphql'
     use "lukas-reineke/indent-blankline.nvim"
     use 'marko-cerovac/material.nvim'
-    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
-
-
+    use {'yamatsum/nvim-cursorline'}
+    use {"romgrk/barbar.nvim"}
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 
 end)
