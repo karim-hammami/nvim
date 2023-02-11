@@ -116,7 +116,6 @@ return require('packer').startup(function(use)
     use "lukas-reineke/indent-blankline.nvim"
     use 'marko-cerovac/material.nvim'
     use {'yamatsum/nvim-cursorline'}
-    use {"romgrk/barbar.nvim"}
     use {
         'numToStr/Comment.nvim',
         config = function()
