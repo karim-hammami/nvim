@@ -124,4 +124,8 @@ return require('packer').startup(function(use)
     }
     use {'ThePrimeagen/vim-be-good'}
     use {"windwp/nvim-ts-autotag"}
+    use 'mfussenegger/nvim-jdtls'
+    use "mfussenegger/nvim-dap"
+    use "rcarriga/nvim-dap-ui"
+
 end)
