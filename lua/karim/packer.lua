@@ -15,7 +15,6 @@ return require('packer').startup(function(use)
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
-    use('tpope/vim-fugitive')
 
 
     use {
@@ -50,8 +49,6 @@ return require('packer').startup(function(use)
         require("toggleterm").setup()
     end }
     use "wikitopian/hardmode"
-    use 'lewis6991/impatient.nvim'
-    use 'folke/lsp-colors.nvim'
     use 'jose-elias-alvarez/null-ls.nvim'
     use "lukas-reineke/indent-blankline.nvim"
     use {'yamatsum/nvim-cursorline'}
@@ -61,8 +58,6 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
-    use {'ThePrimeagen/vim-be-good'}
-    use {"windwp/nvim-ts-autotag"}
     use 'mfussenegger/nvim-jdtls'
 
 end)

@@ -17,7 +17,9 @@ null_ls.setup {
     formatting.stylua,
     diagnostics.flake8,
     diagnostics.tsc,
-    diagnostics.checkstyle,
+    diagnostics.checkstyle.with({
+        extra_args = { "-c", "/google_checks.xml" }, -- or "/sun_checks.xml" or path to self written rules
+    }),
   },
 }
 
