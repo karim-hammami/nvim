@@ -5,6 +5,7 @@ lsp.preset('recommended')
 lsp.ensure_installed({
 	'tsserver',
 	'eslint',
+    'jdtls',
 })
 
 local cmp = require('cmp')
