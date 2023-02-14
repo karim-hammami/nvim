@@ -24,4 +24,4 @@ null_ls.setup {
 }
 
 
-vim.keymap.set("n", "<leader>q", vim.lsp.buf.formatting_sync)
+vim.keymap.set("n", "<A-q>", vim.lsp.buf.formatting_sync)
