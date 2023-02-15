@@ -65,7 +65,15 @@ return require('packer').startup(function(use)
     }
     use 'tpope/vim-fugitive'
     use 'nvim-tree/nvim-web-devicons'
-    use { 'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons' }
+    use({ 'seblj/nvim-tabline', requires = { 'nvim-tree/nvim-web-devicons' } })
+    use 'lewis6991/gitsigns.nvim'
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
 
 end)
 
