@@ -74,6 +74,10 @@ return require('packer').startup(function(use)
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
+    use {
+        "ray-x/lsp_signature.nvim",
+    }
+    use {"ggandor/leap.nvim"}
 
 end)
 
