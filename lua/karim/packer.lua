@@ -59,10 +59,7 @@ return require('packer').startup(function(use)
         end
     }
     use 'mfussenegger/nvim-jdtls'
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
+    
     use 'tpope/vim-fugitive'
     use 'nvim-tree/nvim-web-devicons'
     use({ 'seblj/nvim-tabline', requires = { 'nvim-tree/nvim-web-devicons' } })
