@@ -11,16 +11,12 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup {
     debug = false,
     sources = {
-        formatting.prettier.with { extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } },
         formatting.black.with { extra_args = { "--fast" } },
         -- formatting.yapf,
         diagnostics.flake8,
         diagnostics.tsc,
-        diagnostics.checkstyle.with({
-            extra_args = { "-c", "/google_checks.xml" }, -- or "/sun_checks.xml" or path to self written rules
-        }),
     },
 }
 
 
-vim.keymap.set("n", "<A-q>", vim.lsp.buf.formatting_sync)
+vim.keymap.set("n", "<A-q>", vim.lsp.buf.format)
