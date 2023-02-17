@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
     use "wikitopian/hardmode"
     use 'jose-elias-alvarez/null-ls.nvim'
     use "lukas-reineke/indent-blankline.nvim"
-    use {'yamatsum/nvim-cursorline'}
+    use { 'yamatsum/nvim-cursorline' }
     use {
         'numToStr/Comment.nvim',
         config = function()
@@ -59,16 +59,14 @@ return require('packer').startup(function(use)
         end
     }
     use 'mfussenegger/nvim-jdtls'
-    
     use 'tpope/vim-fugitive'
     use 'nvim-tree/nvim-web-devicons'
     use({ 'seblj/nvim-tabline', requires = { 'nvim-tree/nvim-web-devicons' } })
     use 'lewis6991/gitsigns.nvim'
-    
     use {
         "ray-x/lsp_signature.nvim",
     }
-    use {"ggandor/leap.nvim"}
-
+    use { "ggandor/leap.nvim" }
+    use { 'onsails/lspkind.nvim' }
+    use { "windwp/nvim-ts-autotag" }
 end)
-
