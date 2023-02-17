@@ -69,4 +69,15 @@ return require('packer').startup(function(use)
     use { "ggandor/leap.nvim" }
     use { 'onsails/lspkind.nvim' }
     use { "windwp/nvim-ts-autotag" }
+    use({
+        "folke/trouble.nvim",
+        config = function()
+            require("trouble").setup {
+                icons = false,
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    })
 end)
