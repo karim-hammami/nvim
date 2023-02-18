@@ -80,4 +80,8 @@ return require('packer').startup(function(use)
             }
         end
     })
+
+
+
+    use "~/personal/selector.nvim"
 end)

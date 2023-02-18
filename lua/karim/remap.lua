@@ -1,8 +1,3 @@
--- hello
--- hello fi
--- hello xi
--- hello gi
--- hello si
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>n", vim.cmd.Ex)
 
