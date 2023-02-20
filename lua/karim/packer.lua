@@ -84,4 +84,5 @@ return require('packer').startup(function(use)
 
 
     use "~/personal/selector.nvim"
+    use "nvim-treesitter/playground"
 end)

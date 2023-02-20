@@ -11,5 +11,7 @@ vim.keymap.set("n", "y", '"+y')
 vim.keymap.set("n", "yy", '"+yy')
 vim.keymap.set("v", "y", '"+y')
 vim.keymap.set("n", "<A-e>", require "selector".select)
-
+vim.keymap.set("n", "<A-p>", require "selector".selectCopy)
+vim.keymap.set("n", "<A-n>", require "selector".float)
+vim.keymap.set("n", "<A-m>", require "selector".split)
 vim.cmd("nmap <C-i> mzgg=G`z")
