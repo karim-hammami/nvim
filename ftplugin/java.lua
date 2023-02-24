@@ -4,11 +4,9 @@ if not jdtls_ok then
     return
 end
 
-local jdtls_path = vim.fn.stdpath('data') .. "~/.local/share/nvim/mason/packages/jdtls"
-local path_to_lsp_server = jdtls_path .. "config_linux"
+local jdtls_path = vim.fn.stdpath('data') .. "/home/station/.local/share/nvim/mason/packages/jdtls"
+local path_to_lsp_server = jdtls_path .. "/config_linux/"
 local path_to_plugins = jdtls_path .. "/plugins/"
-local path_to_jar = path_to_plugins .. "org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar"
-local lombok_path = jdtls_path .. "lombok.jar"
 
 local root_markers = { ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }
 local root_dir = require("jdtls.setup").find_root(root_markers)
@@ -26,35 +24,21 @@ local config = {
         '-Declipse.product=org.eclipse.jdt.ls.core.product',
         '-Dlog.protocol=true',
         '-Dlog.level=ALL',
-        '-javaagent:' .. lombok_path,
+        '-javaagent:/home/station/.local/share/nvim/mason/packages/jdtls/lombok.jar',
         '-Xms1g',
         '--add-modules=ALL-SYSTEM',
         '--add-opens', 'java.base/java.util=ALL-UNNAMED',
         '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-
-        '-jar', path_to_jar,
-        '-configuration', path_to_lsp_server,
-        '-data', vim.fn.expand("~/.cache/jdtls/workspace/") .. project_name,
+        '-jar', '/home/station/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
+        '-configuration', "/home/station/.local/share/nvim/mason/packages/jdtls/config_linux/",
+        '-data', '/home/station/workspace/',
     },
     root_dir = root_dir,
     settings = {
         java = {
-            home = '/usr/lib/jvm/default/bin/',
+            home = '/usr/lib/jvm/default/bin/java',
             eclipse = {
                 downloadSources = true,
-            },
-            configuration = {
-                updateBuildConfiguration = "interactive",
-                runtimes = {
-                    {
-                        name = "Java-19",
-                        path = "/usr/lib/jvm/java-19-openjdk/bin/",
-                    },
-                    {
-                        name = "Java-17",
-                        path = "/usr/lib/jvm/java-17-openjdk/bin/"
-                    }
-                }
             },
             maven = {
                 downloadSources = true,
@@ -71,7 +55,7 @@ local config = {
             format = {
                 enabled = true,
                 settings = {
-                    url = "~/.config/nvim/lang-servers/intellij-java-google-style.xml",
+                    url = "/home/station/.config/nvim/lang-servers/intellij-java-google-style.xml",
                     profile = "GoogleStyle",
                 },
             },
@@ -94,7 +78,6 @@ local config = {
                 "org"
             },
         },
-        extendedClientCapabilities = extendedClientCapabilities,
         sources = {
             organizeImports = {
                 starThreshold = 9999,
@@ -116,11 +99,10 @@ local config = {
     },
 }
 
-local key_map = vim.keymap.set
 
-config['on_attach'] = function(client, bufnr)
-    key_map('n', '<leader>oi', ':lua require("jdtls").organize_imports()<CR>')
-    key_map('n', '<leader>jc', ':lua require("jdtls).compile("incremental")')
+config['on_attach'] = function(bufnr)
+    vim.keymap.set('n', '<leader>bn', ':lua require("jdtls").organize_imports()<CR>')
+    vim.keymap.set('n', '<leader>jc', ':lua require("jdtls).compile("incremental")')
     require "lsp_signature".on_attach({
         bind = true, -- This is mandatory, otherwise border config won't get registered.
         floating_window_above_cur_line = false,
