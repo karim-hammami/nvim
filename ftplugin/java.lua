@@ -8,7 +8,7 @@ local jdtls_path = vim.fn.stdpath('data') .. "~/.local/share/nvim/mason/packages
 local path_to_lsp_server = jdtls_path .. "config_linux"
 local path_to_plugins = jdtls_path .. "/plugins/"
 local path_to_jar = path_to_plugins .. "org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar"
-local lombok_path = path_to_plugins .. "lombok.jar"
+local lombok_path = jdtls_path .. "lombok.jar"
 
 local root_markers = { ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }
 local root_dir = require("jdtls.setup").find_root(root_markers)
@@ -71,7 +71,7 @@ local config = {
             format = {
                 enabled = true,
                 settings = {
-                    url = vim.fn.stdpath "config" .. "/lang-servers/intellij-java-google-style.xml",
+                    url = "~/.config/nvim/lang-servers/intellij-java-google-style.xml",
                     profile = "GoogleStyle",
                 },
             },
