@@ -37,6 +37,69 @@ lsp.configure('jdtls', {
         '-configuration', "/home/station/.local/share/nvim/mason/packages/jdtls/config_linux/",
         '-data', '/home/station/workspace/',
     },
+    settings = {
+        java = {
+            home = '/usr/lib/jvm/default/bin/java',
+            eclipse = {
+                downloadSources = true,
+            },
+            maven = {
+                downloadSources = true,
+            },
+            implementationsCodeLens = {
+                enabled = true,
+            },
+            referencesCodeLens = {
+                enabled = true,
+            },
+            references = {
+                includeDecompiledSources = true,
+            },
+            format = {
+                enabled = true,
+                settings = {
+                    url = "/home/station/.config/nvim/lang-servers/intellij-java-google-style.xml",
+                    profile = "GoogleStyle",
+                },
+            },
+        },
+        signatureHelp = { enabled = true },
+        completion = {
+            favoriteStaticMembers = {
+                "org.hamcrest.MatcherAssert.assertThat",
+                "org.hamcrest.Matchers.*",
+                "org.hamcrest.CoreMatchers.*",
+                "org.junit.jupiter.api.Assertions.*",
+                "java.util.Objects.requireNonNull",
+                "java.util.Objects.requireNonNullElse",
+                "org.mockito.Mockito.*",
+            },
+            importOrder = {
+                "java",
+                "javax",
+                "com",
+                "org"
+            },
+        },
+        sources = {
+            organizeImports = {
+                starThreshold = 9999,
+                staticStarThreshold = 9999,
+            },
+        },
+        codeGeneration = {
+            toString = {
+                template = "${object.className}{${member.name()}=${member.value}, ${otherMembers}}",
+            },
+            useBlocks = true,
+        },
+    },
+    flags = {
+        allow_incremental_sync = true,
+    },
+    init_options = {
+        bundles = {},
+    },
 })
 -- handle vim globals
 lsp.configure('lua_ls', {
