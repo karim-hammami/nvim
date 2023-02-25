@@ -99,4 +99,13 @@ return require('packer').startup(function(use)
             require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
         end
     }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+    use 'arkav/lualine-lsp-progress'
+    use {
+        'kosayoda/nvim-lightbulb',
+        requires = 'antoinemadec/FixCursorHold.nvim',
+    }
 end)
