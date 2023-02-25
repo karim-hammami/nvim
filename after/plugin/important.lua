@@ -32,3 +32,6 @@ vim.keymap.set("n", "<leader>t", vim.cmd.tabnew)
 vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
     { silent = true, noremap = true }
 )
+-- code action UI
+vim.g.code_action_menu_window_border = 'single'
+vim.keymap.set("n", "<leader>ga", ":CodeActionMenu<CR>")
