@@ -124,4 +124,17 @@ return require('packer').startup(function(use)
             require("barbecue").setup()
         end,
     })
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+        config = function()
+            require 'alpha'.setup(require 'alpha.themes.startify'.config)
+        end
+    }
+    use { 'stevearc/dressing.nvim' }
+    use({
+        'mrjones2014/legendary.nvim',
+        -- sqlite is only needed if you want to use frecency sorting
+        -- requires = 'kkharji/sqlite.lua'
+    })
 end)
