@@ -17,6 +17,3 @@ null_ls.setup {
         diagnostics.tsc,
     },
 }
-
-
-vim.keymap.set("n", "<A-q>", vim.lsp.buf.format)
