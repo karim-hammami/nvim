@@ -99,34 +99,10 @@ return require('packer').startup(function(use)
             require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
         end
     }
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
-    use 'arkav/lualine-lsp-progress'
     use({
         'weilbith/nvim-code-action-menu',
         cmd = 'CodeActionMenu',
     })
-    use({
-        "utilyre/barbecue.nvim",
-        tag = "*",
-        requires = {
-            "SmiteshP/nvim-navic",
-            "nvim-tree/nvim-web-devicons", -- optional dependency
-        },
-        after = "nvim-web-devicons", -- keep this if you're using NvChad
-        config = function()
-            require("barbecue").setup()
-        end,
-    })
-    use {
-        'goolord/alpha-nvim',
-        requires = { 'nvim-tree/nvim-web-devicons' },
-        config = function()
-            require 'alpha'.setup(require 'alpha.themes.startify'.config)
-        end
-    }
     use { 'stevearc/dressing.nvim' }
     use({
         'mrjones2014/legendary.nvim',
