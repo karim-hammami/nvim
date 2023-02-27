@@ -104,10 +104,6 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use 'arkav/lualine-lsp-progress'
-    use {
-        'kosayoda/nvim-lightbulb',
-        requires = 'antoinemadec/FixCursorHold.nvim',
-    }
     use({
         'weilbith/nvim-code-action-menu',
         cmd = 'CodeActionMenu',

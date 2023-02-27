@@ -1,7 +1,7 @@
 -- update packer
 vim.keymap.set("n", "<leader>su", vim.cmd.PackerSync)
 -- vertical split
-vim.keymap.set("n", "<leader>a", vim.cmd.vsplit)
+vim.keymap.set("n", "<leader>a", ":vsplit<CR>")
 -- horizontal split
 vim.keymap.set("n", "<C-y>", vim.cmd.split)
 -- better split navigation
@@ -35,3 +35,7 @@ vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
 -- code action UI
 vim.g.code_action_menu_window_border = 'single'
 vim.keymap.set("n", "<leader>ga", ":CodeActionMenu<CR>")
+-- restart LSP
+vim.keymap.set("n", "<A-y>", ":LspRestart<CR>")
+-- LSP info
+vim.keymap.set("n", "<A-y>,", ":LspInfo<CR>")
