@@ -37,6 +37,7 @@ lsp.configure('jdtls', {
         '-configuration', "/home/station/.local/share/nvim/mason/packages/jdtls/config_linux/",
         '-data', '/home/station/workspace/',
     },
+    filetypes = { 'java', 'kotlin' },
     settings = {
         java = {
             home = '/usr/lib/jvm/default/bin/java',
