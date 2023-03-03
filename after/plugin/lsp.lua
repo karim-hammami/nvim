@@ -5,7 +5,8 @@ lsp.preset('recommended')
 lsp.ensure_installed({
     'tsserver',
     'jdtls',
-    'lua_ls'
+    'lua_ls',
+    'gopls'
 })
 -- format on save
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
@@ -19,6 +20,19 @@ local enable_format_on_save = function(_, bufnr)
         end,
     })
 end
+
+lsp.configure('gopls', {
+    cmd = { "/home/station/.local/share/nvim/mason/packages/gopls/gopls" },
+    filetypes = { "go", "gomod" },
+    settings = {
+        gopls = {
+            analyses = {
+                unusedparams = true,
+            },
+            staticcheck = true,
+        },
+    },
+})
 
 lsp.configure('jdtls', {
     cmd = {
@@ -37,7 +51,7 @@ lsp.configure('jdtls', {
         '-configuration', "/home/station/.local/share/nvim/mason/packages/jdtls/config_linux/",
         '-data', '/home/station/workspace/',
     },
-    filetypes = { 'java', 'kotlin' },
+    filetypes = { 'java' },
     settings = {
         java = {
             home = '/usr/lib/jvm/default/bin/java',

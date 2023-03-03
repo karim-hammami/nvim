@@ -109,4 +109,5 @@ return require('packer').startup(function(use)
         -- sqlite is only needed if you want to use frecency sorting
         -- requires = 'kkharji/sqlite.lua'
     })
+    use 'udalov/kotlin-vim'
 end)
