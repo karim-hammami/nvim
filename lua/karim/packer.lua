@@ -110,4 +110,5 @@ return require('packer').startup(function(use)
         -- requires = 'kkharji/sqlite.lua'
     })
     use 'udalov/kotlin-vim'
+    use 'simrat39/rust-tools.nvim'
 end)

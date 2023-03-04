@@ -6,7 +6,8 @@ lsp.ensure_installed({
     'tsserver',
     'jdtls',
     'lua_ls',
-    'gopls'
+    'gopls',
+    'rust_analyzer'
 })
 -- format on save
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
@@ -20,6 +21,11 @@ local enable_format_on_save = function(_, bufnr)
         end,
     })
 end
+
+local rust_lsp = lsp.build_options('rust_analyzer', {})
+
+require('rust-tools').setup({server = rust_lsp})
+
 
 lsp.configure('gopls', {
     cmd = { "/home/station/.local/share/nvim/mason/packages/gopls/gopls" },
