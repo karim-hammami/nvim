@@ -24,7 +24,13 @@ end
 
 local rust_lsp = lsp.build_options('rust_analyzer', {})
 
-require('rust-tools').setup({server = rust_lsp})
+
+lsp.configure('vls', {
+    cmd = { "v", "ls" },
+    filetypes = { "vlang", "v" }
+})
+
+require('rust-tools').setup({ server = rust_lsp })
 
 
 lsp.configure('gopls', {
