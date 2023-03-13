@@ -7,6 +7,7 @@ require('legendary').setup({
         { 'K',           ':lua vim.lsp.buf.hover()<CR>',          description = 'LSP hover' },
         { '<leader>vf',  ':lua vim.lsp.buf.implementation()<CR>', description = 'LSP goto implementation' },
         { 'gd',          ':lua vim.lsp.buf.definition()<CR>',     description = 'LSP goto definition' },
+        { 'gA',          ':Telescope flutter commands<CR>',       description = 'Flutter Commands' }
     }
 })
 

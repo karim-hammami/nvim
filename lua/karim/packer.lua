@@ -111,4 +111,11 @@ return require('packer').startup(function(use)
     })
     use 'udalov/kotlin-vim'
     use 'simrat39/rust-tools.nvim'
+    use {
+        'akinsho/flutter-tools.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+    }
 end)
