@@ -4,7 +4,6 @@ lsp.preset('recommended')
 
 lsp.ensure_installed({
     'tsserver',
-    'jdtls',
     'lua_ls',
     'gopls',
     'rust_analyzer'
@@ -59,7 +58,8 @@ lsp.configure('jdtls', {
         '--add-modules=ALL-SYSTEM',
         '--add-opens', 'java.base/java.util=ALL-UNNAMED',
         '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-        '-jar', '/home/station/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
+        '-jar',
+        '/home/station/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
         '-configuration', "/home/station/.local/share/nvim/mason/packages/jdtls/config_linux/",
         '-data', '/home/station/workspace/',
     },
